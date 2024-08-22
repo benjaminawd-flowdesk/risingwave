@@ -13,6 +13,7 @@
 // limitations under the License.
 
 use std::collections::{BTreeMap, HashMap};
+use std::time::Duration;
 
 use crate::source::cdc::external::CdcTableType;
 use crate::source::iceberg::ICEBERG_CONNECTOR;
@@ -47,12 +48,14 @@ impl<T: crate::source::cdc::CdcSourceTypeTrait> WithOptions
 
 impl<T: WithOptions> WithOptions for Option<T> {}
 impl WithOptions for Vec<String> {}
+impl WithOptions for Vec<Duration> {}
 impl WithOptions for HashMap<String, String> {}
 impl WithOptions for BTreeMap<String, String> {}
 
 impl WithOptions for String {}
 impl WithOptions for bool {}
 impl WithOptions for usize {}
+impl WithOptions for u8 {}
 impl WithOptions for u16 {}
 impl WithOptions for u32 {}
 impl WithOptions for u64 {}
