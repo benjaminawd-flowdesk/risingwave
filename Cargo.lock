@@ -915,9 +915,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "76cb6d108605c5489fff1ef9c520656946ad05ed0de3ea6d26d56bcb34bdb8c5"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-buffer 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-buffer 52.0.0",
+ "arrow-schema 52.0.0",
  "atomic-time",
  "rquickjs",
 ]
@@ -929,10 +929,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4506efc6fbc200c083add2a7ed4e3616a859941a745e922320ae7051d90d12ec"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-buffer 50.0.0",
- "arrow-ipc 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-buffer 52.0.0",
+ "arrow-ipc 52.0.0",
+ "arrow-schema 52.0.0",
  "lazy_static",
  "pyo3",
  "pyo3-build-config",
@@ -945,9 +945,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eb829e25925161d93617d4b053bae03fe51e708f2cce088d85df856011d4f369"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-ipc 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-ipc 52.0.0",
+ "arrow-schema 52.0.0",
  "async-trait",
  "base64 0.22.0",
  "genawaiter",
@@ -3831,7 +3831,7 @@ dependencies = [
 name = "delta_btree_map"
 version = "2.1.0-alpha"
 dependencies = [
- "educe",
+ "educe 0.6.0",
  "enum-as-inner 0.6.0",
 ]
 
@@ -4245,6 +4245,18 @@ dependencies = [
  "signature 2.2.0",
  "subtle",
  "zeroize",
+]
+
+[[package]]
+name = "educe"
+version = "0.5.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e4bd92664bf78c4d3dba9b7cdafce6fa15b13ed3ed16175218196942e99168a8"
+dependencies = [
+ "enum-ordinalize",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.66",
 ]
 
 [[package]]
@@ -5304,7 +5316,7 @@ dependencies = [
  "http 0.2.9",
  "thiserror",
  "tokio",
- "tonic 0.10.2",
+ "tonic 0.11.0",
  "tower",
  "tracing",
  "trust-dns-resolver 0.23.2",
@@ -6043,7 +6055,7 @@ dependencies = [
  "log",
  "murmur3",
  "once_cell",
- "opendal 0.47.2",
+ "opendal 0.49.0",
  "ordered-float 3.9.1",
  "parquet 52.0.0",
  "prometheus",
@@ -7827,7 +7839,6 @@ dependencies = [
  "md-5",
  "once_cell",
  "percent-encoding",
- "prometheus",
  "quick-xml 0.31.0",
  "reqsign 0.15.2",
  "reqwest 0.12.4",
@@ -7859,6 +7870,7 @@ dependencies = [
  "md-5",
  "once_cell",
  "percent-encoding",
+ "prometheus",
  "quick-xml 0.36.1",
  "reqsign 0.16.0",
  "reqwest 0.12.4",
@@ -9056,7 +9068,7 @@ checksum = "8bdf592881d821b83d471f8af290226c8d51402259e9bb5be7f9f8bdebbb11ac"
 dependencies = [
  "bytes",
  "heck 0.4.1",
- "itertools 0.10.5",
+ "itertools 0.11.0",
  "log",
  "multimap 0.8.3",
  "once_cell",
@@ -9111,7 +9123,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "265baba7fabd416cf5078179f7d2cbeca4ce7a9041111900675ea7c4cb8a4c32"
 dependencies = [
  "anyhow",
- "itertools 0.10.5",
+ "itertools 0.11.0",
  "proc-macro2",
  "quote",
  "syn 2.0.66",
@@ -9294,7 +9306,7 @@ dependencies = [
  "indoc",
  "libc",
  "memoffset",
- "parking_lot 0.11.2",
+ "parking_lot 0.12.1",
  "portable-atomic",
  "pyo3-build-config",
  "pyo3-ffi",
@@ -10194,7 +10206,7 @@ dependencies = [
  "criterion",
  "darwin-libproc",
  "easy-ext",
- "educe",
+ "educe 0.6.0",
  "either",
  "enum-as-inner 0.6.0",
  "enumflags2",
@@ -10285,7 +10297,7 @@ name = "risingwave_common_estimate_size"
 version = "2.1.0-alpha"
 dependencies = [
  "bytes",
- "educe",
+ "educe 0.6.0",
  "ethnum",
  "fixedbitset 0.5.0",
  "jsonbb",
@@ -10600,7 +10612,7 @@ dependencies = [
  "rustls-pemfile 2.1.1",
  "rustls-pki-types",
  "rw_futures_util",
- "sea-schema",
+ "sea-schema 0.14.2",
  "serde",
  "serde_derive",
  "serde_json",
@@ -10690,7 +10702,7 @@ dependencies = [
  "risingwave_rpc_client",
  "risingwave_storage",
  "risingwave_stream",
- "sea-orm",
+ "sea-orm 0.12.14",
  "serde",
  "serde_json",
  "serde_yaml",
@@ -10771,7 +10783,7 @@ dependencies = [
  "const-currying",
  "downcast-rs",
  "easy-ext",
- "educe",
+ "educe 0.6.0",
  "either",
  "enum-as-inner 0.6.0",
  "expect-test",
@@ -10817,7 +10829,7 @@ dependencies = [
  "chrono",
  "chrono-tz 0.9.0",
  "criterion",
- "educe",
+ "educe 0.6.0",
  "expect-test",
  "fancy-regex",
  "futures-async-stream",
@@ -10886,7 +10898,7 @@ dependencies = [
  "downcast-rs",
  "dyn-clone",
  "easy-ext",
- "educe",
+ "educe 0.6.0",
  "either",
  "enum-as-inner 0.6.0",
  "expect-test",
@@ -11176,7 +11188,7 @@ dependencies = [
  "rw-aws-sdk-ec2",
  "rw_futures_util",
  "scopeguard",
- "sea-orm",
+ "sea-orm 0.12.14",
  "serde",
  "serde_json",
  "strum 0.26.3",
@@ -11219,7 +11231,7 @@ name = "risingwave_meta_model_migration"
 version = "2.1.0-alpha"
 dependencies = [
  "async-std",
- "sea-orm",
+ "sea-orm 0.12.14",
  "sea-orm-migration",
  "serde",
  "serde_json",
@@ -11234,7 +11246,7 @@ dependencies = [
  "risingwave_common",
  "risingwave_hummock_sdk",
  "risingwave_pb",
- "sea-orm",
+ "sea-orm 0.12.14",
  "serde",
  "serde_json",
 ]
@@ -11245,7 +11257,7 @@ version = "2.1.0-alpha"
 dependencies = [
  "anyhow",
  "clap",
- "educe",
+ "educe 0.6.0",
  "either",
  "futures",
  "hex",
@@ -11265,7 +11277,7 @@ dependencies = [
  "risingwave_meta_service",
  "risingwave_pb",
  "risingwave_rpc_client",
- "sea-orm",
+ "sea-orm 0.12.14",
  "serde",
  "serde_json",
  "thiserror-ext",
@@ -11293,7 +11305,7 @@ dependencies = [
  "risingwave_meta",
  "risingwave_meta_model_v2",
  "risingwave_pb",
- "sea-orm",
+ "sea-orm 0.12.14",
  "serde_json",
  "sync-point",
  "thiserror-ext",
@@ -11671,7 +11683,7 @@ dependencies = [
  "cfg-if",
  "criterion",
  "delta_btree_map",
- "educe",
+ "educe 0.6.0",
  "either",
  "enum-as-inner 0.6.0",
  "expect-test",
@@ -12340,9 +12352,9 @@ dependencies = [
  "log",
  "ouroboros",
  "rust_decimal",
- "sea-orm-macros",
- "sea-query",
- "sea-query-binder",
+ "sea-orm-macros 0.12.14",
+ "sea-query 0.30.7",
+ "sea-query-binder 0.5.0",
  "serde",
  "serde_json",
  "sqlx",
@@ -12355,17 +12367,40 @@ dependencies = [
 ]
 
 [[package]]
-name = "sea-orm-cli"
-version = "0.12.14"
+name = "sea-orm"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "465ea2308d4716837e9af4a2cff8e14c28135867a580bb93e9e03d408a3a6afb"
+checksum = "f9d4ec1cdd8bdd3553d3c946079f58efa33fedc477f32603652652abcef96fe6"
+dependencies = [
+ "async-stream",
+ "async-trait",
+ "futures",
+ "log",
+ "ouroboros",
+ "sea-orm-macros 1.0.0",
+ "sea-query 0.31.0",
+ "sea-query-binder 0.6.0",
+ "serde",
+ "sqlx",
+ "strum 0.26.3",
+ "thiserror",
+ "tracing",
+ "url",
+ "uuid",
+]
+
+[[package]]
+name = "sea-orm-cli"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d525eee597817631f800857b0c2fe8645ec9c65b4304176a44bf14b93366009e"
 dependencies = [
  "chrono",
  "clap",
  "dotenvy",
  "glob",
  "regex",
- "sea-schema",
+ "sea-schema 0.15.0",
  "tracing",
  "tracing-subscriber",
  "url",
@@ -12386,18 +12421,32 @@ dependencies = [
 ]
 
 [[package]]
-name = "sea-orm-migration"
-version = "0.12.14"
+name = "sea-orm-macros"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac734b6e5610c2764056cc8495fbc293cd1c8ebe084fdfb74c3b0cdaaff9bb92"
+checksum = "f363ead48b625a6f8f905322a820464f728fa4fe4f1c222bed5234ccf8fb8555"
+dependencies = [
+ "heck 0.4.1",
+ "proc-macro2",
+ "quote",
+ "sea-bae",
+ "syn 2.0.66",
+ "unicode-ident",
+]
+
+[[package]]
+name = "sea-orm-migration"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5df62369752f91b9295f8d71c146d84f818301a9ae7295106ebe8bbaa989a072"
 dependencies = [
  "async-trait",
  "clap",
  "dotenvy",
  "futures",
- "sea-orm",
+ "sea-orm 1.0.0",
  "sea-orm-cli",
- "sea-schema",
+ "sea-schema 0.15.0",
  "tracing",
  "tracing-subscriber",
 ]
@@ -12421,6 +12470,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "sea-query"
+version = "0.31.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7e5073b2cfed767511a57d18115f3b3d8bcb5690bf8c89518caec6cb22c0cd74"
+dependencies = [
+ "educe 0.5.11",
+ "inherent",
+ "ordered-float 3.9.1",
+ "sea-query-derive",
+ "uuid",
+]
+
+[[package]]
 name = "sea-query-binder"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -12429,10 +12491,21 @@ dependencies = [
  "bigdecimal 0.3.1",
  "chrono",
  "rust_decimal",
- "sea-query",
+ "sea-query 0.30.7",
  "serde_json",
  "sqlx",
  "time",
+ "uuid",
+]
+
+[[package]]
+name = "sea-query-binder"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "754965d4aee6145bec25d0898e5c931e6c22859789ce62fd85a42a15ed5a8ce3"
+dependencies = [
+ "sea-query 0.31.0",
+ "sqlx",
  "uuid",
 ]
 
@@ -12456,10 +12529,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "30d148608012d25222442d1ebbfafd1228dbc5221baf4ec35596494e27a2394e"
 dependencies = [
  "futures",
- "sea-query",
- "sea-query-binder",
- "sea-schema-derive",
+ "sea-query 0.30.7",
+ "sea-query-binder 0.5.0",
+ "sea-schema-derive 0.2.0",
  "sqlx",
+]
+
+[[package]]
+name = "sea-schema"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad52149fc81836ea7424c3425d8f6ed8ad448dd16d2e4f6a3907ba46f3f2fd78"
+dependencies = [
+ "futures",
+ "sea-query 0.31.0",
+ "sea-schema-derive 0.3.0",
 ]
 
 [[package]]
@@ -12472,6 +12556,18 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "sea-schema-derive"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "debdc8729c37fdbf88472f97fd470393089f997a909e535ff67c544d18cfccf0"
+dependencies = [
+ "heck 0.4.1",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.66",
 ]
 
 [[package]]
@@ -13220,7 +13316,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1106ff933150aa8b8af71ee57631cd3ac2feeccd230d122ad833e7f0cd5e8fe1"
 dependencies = [
  "async-trait",
- "educe",
+ "educe 0.6.0",
  "fs-err",
  "futures",
  "glob",
@@ -14277,10 +14373,7 @@ dependencies = [
  "percent-encoding",
  "pin-project",
  "prost 0.12.1",
- "rustls 0.21.11",
- "rustls-pemfile 1.0.4",
  "tokio",
- "tokio-rustls 0.24.1",
  "tokio-stream 0.1.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower",
  "tower-layer",
@@ -14307,7 +14400,10 @@ dependencies = [
  "percent-encoding",
  "pin-project",
  "prost 0.12.1",
+ "rustls-pemfile 2.1.1",
+ "rustls-pki-types",
  "tokio",
+ "tokio-rustls 0.25.0",
  "tokio-stream 0.1.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower",
  "tower-layer",
