@@ -5,8 +5,7 @@ on:
     inputs:
       version:
         description: Version of the docker image
-        type: boolean
-        default: true
+        type: string
 
 concurrency:
   group: cd-${{ github.ref }}-development
@@ -18,7 +17,7 @@ jobs:
     name: 'Build'
     runs-on: ubuntu-latest
     environment:
-      name: development
+      name: dev
     permissions:
       contents: write
     steps:
