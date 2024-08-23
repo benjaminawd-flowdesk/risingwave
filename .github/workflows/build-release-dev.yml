@@ -7,10 +7,6 @@ on:
         description: Version of the docker image
         type: string
 
-concurrency:
-  group: cd-${{ github.ref }}-development
-  cancel-in-progress: false
-
 jobs:
   build_release:
     if: startsWith(github.head_ref, 'dependabot/pip/dev-dependencies') == false
@@ -21,6 +17,21 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Move /var/lib/docker/
+        run: sudo mv /var/lib/docker/ "${GITHUB_WORKSPACE}/docker"
+
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          build-mount-path: '/var/lib/docker/'
+
+      - name: Restore /var/lib/docker/
+        run: sudo sh -c "mv ${GITHUB_WORKSPACE}/docker/* /var/lib/docker"
+
       - name: 'Checkout repo'
         uses: actions/checkout@v4
 
