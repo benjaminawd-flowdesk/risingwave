@@ -915,9 +915,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "76cb6d108605c5489fff1ef9c520656946ad05ed0de3ea6d26d56bcb34bdb8c5"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-buffer 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-buffer 52.0.0",
+ "arrow-schema 52.0.0",
  "atomic-time",
  "rquickjs",
 ]
@@ -929,10 +929,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4506efc6fbc200c083add2a7ed4e3616a859941a745e922320ae7051d90d12ec"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-buffer 50.0.0",
- "arrow-ipc 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-buffer 52.0.0",
+ "arrow-ipc 52.0.0",
+ "arrow-schema 52.0.0",
  "lazy_static",
  "pyo3",
  "pyo3-build-config",
@@ -945,9 +945,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eb829e25925161d93617d4b053bae03fe51e708f2cce088d85df856011d4f369"
 dependencies = [
  "anyhow",
- "arrow-array 50.0.0",
- "arrow-ipc 50.0.0",
- "arrow-schema 50.0.0",
+ "arrow-array 52.0.0",
+ "arrow-ipc 52.0.0",
+ "arrow-schema 52.0.0",
  "async-trait",
  "base64 0.22.0",
  "genawaiter",
@@ -5295,16 +5295,16 @@ dependencies = [
 
 [[package]]
 name = "ginepro"
-version = "0.7.2"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3b00ef897d4082727a53ea1111cd19bfa4ccdc476a5eb9f49087047113a43891"
+checksum = "cae77099e2399aea466bba05f0d23a150b4f34ed7ce535835e71d91399e65b58"
 dependencies = [
  "anyhow",
  "async-trait",
- "http 0.2.9",
+ "http 1.1.0",
  "thiserror",
  "tokio",
- "tonic 0.10.2",
+ "tonic 0.12.1",
  "tower",
  "tracing",
  "trust-dns-resolver 0.23.2",
@@ -6043,7 +6043,7 @@ dependencies = [
  "log",
  "murmur3",
  "once_cell",
- "opendal 0.47.2",
+ "opendal 0.49.0",
  "ordered-float 3.9.1",
  "parquet 52.0.0",
  "prometheus",
@@ -7827,7 +7827,6 @@ dependencies = [
  "md-5",
  "once_cell",
  "percent-encoding",
- "prometheus",
  "quick-xml 0.31.0",
  "reqsign 0.15.2",
  "reqwest 0.12.4",
@@ -7859,6 +7858,7 @@ dependencies = [
  "md-5",
  "once_cell",
  "percent-encoding",
+ "prometheus",
  "quick-xml 0.36.1",
  "reqsign 0.16.0",
  "reqwest 0.12.4",
@@ -9056,7 +9056,7 @@ checksum = "8bdf592881d821b83d471f8af290226c8d51402259e9bb5be7f9f8bdebbb11ac"
 dependencies = [
  "bytes",
  "heck 0.4.1",
- "itertools 0.10.5",
+ "itertools 0.11.0",
  "log",
  "multimap 0.8.3",
  "once_cell",
@@ -9111,7 +9111,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "265baba7fabd416cf5078179f7d2cbeca4ce7a9041111900675ea7c4cb8a4c32"
 dependencies = [
  "anyhow",
- "itertools 0.10.5",
+ "itertools 0.11.0",
  "proc-macro2",
  "quote",
  "syn 2.0.66",
@@ -9294,7 +9294,7 @@ dependencies = [
  "indoc",
  "libc",
  "memoffset",
- "parking_lot 0.11.2",
+ "parking_lot 0.12.1",
  "portable-atomic",
  "pyo3-build-config",
  "pyo3-ffi",
@@ -14277,10 +14277,7 @@ dependencies = [
  "percent-encoding",
  "pin-project",
  "prost 0.12.1",
- "rustls 0.21.11",
- "rustls-pemfile 1.0.4",
  "tokio",
- "tokio-rustls 0.24.1",
  "tokio-stream 0.1.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower",
  "tower-layer",
